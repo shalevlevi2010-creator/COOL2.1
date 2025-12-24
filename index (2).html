@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>לוח אישי עם משתמשים</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container" id="authBox">
+  <h2 id="authTitle">יצירת משתמש</h2>
+  <input id="username" placeholder="שם משתמש">
+  <input id="password" type="password" placeholder="סיסמה">
+  <button onclick="handleAuth()">המשך</button>
+</div>
+
+<div class="container" id="dashboard" style="display:none;">
+  <h2>הלוח האישי</h2>
+
+  <div class="boards">
+    <div class="board small">
+      <h3>דרגה</h3>
+      <textarea id="rank"></textarea>
+    </div>
+
+    <div class="board large">
+      <h3>יומן מסע</h3>
+      <textarea id="journey"></textarea>
+    </div>
+
+    <div class="board medium">
+      <h3>ציונים חשובים</h3>
+      <textarea id="grades"></textarea>
+    </div>
+
+    <div class="board small">
+      <h3>שם</h3>
+      <textarea id="name"></textarea>
+    </div>
+  </div>
+
+  <button onclick="saveBoards()">שמור הכל</button>
+  <button onclick="logout()">התנתק</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
